@@ -64,3 +64,29 @@ animateSkills()
 }
 
 })
+
+
+// Close mobile navbar after clicking a navigation link
+
+const navbarCollapse = document.getElementById('nav');
+
+const navLinks = document.querySelectorAll('#nav .nav-link');
+
+navLinks.forEach(link => {
+
+    link.addEventListener('click', () => {
+
+        if (
+            window.innerWidth < 992 &&
+            navbarCollapse.classList.contains('show')
+        ) {
+            const bsCollapse = bootstrap.Collapse.getOrCreateInstance(
+                navbarCollapse
+            );
+
+            bsCollapse.hide();
+        }
+
+    });
+
+});
