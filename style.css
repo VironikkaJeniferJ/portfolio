@@ -591,8 +591,9 @@ border-radius:10px;
         grid-template-columns: 1fr;
         gap: 22px;
     }
-
     .achievement-image img {
         height: 230px;
     }
 }
+
+//
